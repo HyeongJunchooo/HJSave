@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#main {
+		border-style: ridge;
+		border-width : 100px;
+		border-color : blue;
+		text-align : center;
+	}
+	#level {
+		text-align : center;
+	}
+	#go {
+		
+		text-align : center;
+	}
+	#button {
+		font-size : 40px;
+	}
+</style>
+<script>
+function go() {
+	const radios = document.getElementsByName("check");
+	
+	let count = 0;
+	for(let i=0;i<radios.length;i++) {
+		if(radios[i].checked){
+			count++;
+		}
+	}
+	if(count !== 0) {
+		//START링크를 타고 넘어가지게 하려함
+		
+	}
+	else{
+		alert("난이도를 선택하지 않았습니다.");
+		return false;
+	}
+	 
+		
+		
+	
+}
+</script>
+</head>
+<body>
+ <h1 id="main">숫자 야구 게임</h1>
+ <div id="level">난이도 설정
+ <input type = "radio" name="check" value="hard">HARD
+ <input type = "radio" name="check" value="normal">NORMAL
+ <input type = "radio" name="check" value="easy">EASY
+ </div><br/>
+ 
+ <div id="go"><a href="../day6/start.html"><button  onclick="return go();" id="button"><strong>START</strong></button></a></div>
+
+ 
+
+</body>
+</html>
